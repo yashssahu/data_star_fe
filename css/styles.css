@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #ffb006;
-  color: black;
+  background-color: #022361;
+  color: rgb(253, 253, 253);
   font-family: Arial, sans-serif;
 }
 
@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f70000;
+  background-color: #8e97fd;
   padding: 20px;
 }
 
@@ -35,32 +35,9 @@ main {
   padding: 40px 20px;
 }
 
-/* Animation definitions */
-@keyframes slideTop {
-  0% {
-    opacity: 500;
-    transform: translateY(-40px);
-  }
-  100% {
-    opacity: 10;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 /* 🎯 Hero Top Section */
 .hero-top {
-  background: linear-gradient(to right, #ffe259, #ffa751);
+  background: #8e97fd;
   padding: 60px 40px;
   border-radius: 1.5rem;;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -97,7 +74,7 @@ main {
 
 /* 🔻 Hero Main Section */
 .hero-section {
-  background: #f70000;
+  background: #8e97fd;
   padding: 60px 40px;
   color: #1a1a1a;
   text-align: left;
@@ -154,7 +131,7 @@ h1 {
 
 /* ✅ Why Choose Section */
 .why-choose {
-  background-color: #f70000;
+  background-color: #8e97fd;
   padding: 40px;
   margin-top: 40px;
   border-radius: 12px;
@@ -192,9 +169,10 @@ h1 {
   margin-top: 20px;
 }
 
+
 /* Cards */
 .card {
-  background-color: #fa2a2a;
+  background-color: #8e97fd;
   padding: 25px;
   border-radius: 10px;
   position: relative;
@@ -209,6 +187,8 @@ h1 {
 
 .card h2 {
   font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -235,5 +215,5 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background-color: #cc0000;
+  background-color: #8e97fd;
 }
