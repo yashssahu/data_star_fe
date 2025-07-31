@@ -1,10 +1,4 @@
-:root {
-  --primary-color: #007d79;
-  --accent-color: #0f62fe;
-  --text-color: #222;
-  --bg-color: #f8f9fa;
-}
-
+/* Reset default margins/paddings */
 * {
   margin: 0;
   padding: 0;
@@ -12,78 +6,234 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  background-color: #ffb006;
+  color: black;
+  font-family: Arial, sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
+  background-color: #f70000;
+  padding: 20px;
 }
 
-header .logo {
-  font-size: 1.5rem;
+.logo {
+  font-size: 1.8em;
   font-weight: bold;
 }
 
-header nav a {
-  color: white;
-  margin-left: 1rem;
+nav a {
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
-}
-
-header nav a:hover {
-  text-decoration: underline;
+  color: black;
+  font-weight: bold;
 }
 
 main {
-  padding: 2rem;
-  text-align: center;
+  padding: 40px 20px;
 }
 
-main h1 {
-  color: var(--primary-color);
-  margin-bottom: 2rem;
+/* Animation definitions */
+@keyframes slideTop {
+  0% {
+    opacity: 500;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 10;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 🎯 Hero Top Section */
+.hero-top {
+  background: linear-gradient(to right, #ffe259, #ffa751);
+  padding: 60px 40px;
+  border-radius: 1.5rem;;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px; /* added space from header */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideTop 1s ease forwards;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  animation: slideLeft 1s ease forwards;
+}
+
+.hero-top h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.hero-top .subheadline {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* 🔻 Hero Main Section */
+.hero-section {
+  background: #f70000;
+  padding: 60px 40px;
+  color: #1a1a1a;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideLeft 1.2s ease forwards;
+}
+
+.hero-section h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.hero-section p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.hero-section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
 }
 
+/* ✅ Why Choose Section */
+.why-choose {
+  background-color: #f70000;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideLeft 1.4s ease forwards;
+}
+
+.why-choose h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 24px 0;
+}
+
+.why-choose li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.community-note {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Cards */
 .card {
-  background-color: white;
-  border: 1px solid #cce;
-  padding: 1.5rem;
+  background-color: #fa2a2a;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
   transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: left;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-color);
+  transform: scale(1.03);
 }
 
 .card h2 {
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+/* Subtopics initially hidden */
+.card ul {
+  display: none;
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+/* Show subtopics on hover */
+.card:hover ul {
+  display: block;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: white;
-  margin-top: 3rem;
+  padding: 20px;
+  font-size: 0.9em;
+  background-color: #cc0000;
 }
